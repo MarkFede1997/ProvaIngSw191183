@@ -38,6 +38,26 @@ public class MyListUtilTest {
 	public void ordinaCrescenteWorks()
 	{
 		assertEquals(Arrays.asList(1,2,3,4,5,6,7,8), ordinatore.ordinaCrescente(lista));
+		
+		lista.clear();
+		for (int i=5; i>0; i--)
+			lista.add(i);
+		
+		assertEquals(Arrays.asList(1,2,3,4,5), ordinatore.ordinaCrescente(lista));
+			
 	}
 
+	@Test
+	public void ordinaDecrescenteWorks()
+	{
+		assertEquals(Arrays.asList(8,7,6,5,4,3,2,1), ordinatore.ordinaDecrescente(lista));
+	
+		lista.clear();
+		for (int i=0; i<5; i++)
+			lista.add(i);
+		
+		assertEquals(Arrays.asList(4,3,2,1,0), ordinatore.ordinaDecrescente(lista));
+	}
+	
+	
 }
