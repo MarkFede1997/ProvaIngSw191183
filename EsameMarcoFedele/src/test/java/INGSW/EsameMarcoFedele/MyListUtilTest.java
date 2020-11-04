@@ -59,5 +59,12 @@ public class MyListUtilTest {
 		assertEquals(Arrays.asList(4,3,2,1,0), ordinatore.ordinaDecrescente(lista));
 	}
 	
-	
+	@Test
+	public void decidiOrdinamentoWorks()
+	{
+		ordinatore.decidiOrdinamento(true, lista);
+		assertEquals(Arrays.asList(1,2,3,4,5,6,7,8), lista);
+		ordinatore.decidiOrdinamento(false, lista);
+		assertEquals(Arrays.asList(8,7,6,5,4,3,2,1), lista);
+	}
 }
