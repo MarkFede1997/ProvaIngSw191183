@@ -15,7 +15,7 @@ public class MyListUtil {
 				
 				return -1;
 			}
-			
+
 		});
 		
 		return lista;
@@ -37,4 +37,11 @@ public class MyListUtil {
 		return lista;
 	}
 	
+	public void decidiOrdinamento(boolean crescente, ArrayList<Integer> lista)
+	{
+		if (crescente)
+			ordinaCrescente(lista);
+		else
+			ordinaDecrescente(lista);
+	}
 }

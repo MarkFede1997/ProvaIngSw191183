@@ -1,6 +1,7 @@
 package INGSW.EsameMarcoFedele;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class App 
 {
@@ -18,16 +19,24 @@ public class App
         lista.add(10);
         lista.add(8);
         
-        ordinatore.ordinaCrescente(lista);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Scrivere true per ordinare la lista in modo crescente, false altrimenti");
+        boolean crescente = sc.nextBoolean();
+        sc.close();
         
+        ordinatore.decidiOrdinamento(crescente, lista);
+        
+        if (crescente)
+        {
         System.out.println("Ordino la lista crescente: ");
         for (Integer I : lista)
         	System.out.println(I);
-        
-        ordinatore.ordinaDecrescente(lista);
-        
+        }
+        else
+        {
         System.out.println("Ordino la lista decrescente: ");
         for (Integer I : lista)
         	System.out.println(I);
+        }
     }
 }
